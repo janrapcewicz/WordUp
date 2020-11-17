@@ -1,0 +1,1 @@
+export 'word_def_model.dart';
