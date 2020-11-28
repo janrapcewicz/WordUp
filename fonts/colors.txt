@@ -1,0 +1,7 @@
+accentColor: Color(0xFF536CE3),
+cardColor: Color(0xFFDEE5F7),
+backgroundColor: Color(0xFF3FF3FE),
+secondBackgroundColor: Color(0xFFFCFCFC),
+1tTextColor: Color(0xFF595C6D),
+2dTextColor: Color(0xFF8B8EB5),
+3dTextColor: Color(0xFFB3B5D2),

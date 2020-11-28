@@ -1,23 +1,23 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'Widgets/circular_progerss_bar.dart';
+import 'Pages/MAIN.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-int _page = 0;
-GlobalKey _bottomNavigationKey = GlobalKey();
+int page = 2;
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter WordUp',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        accentColor: Color(0xFF52BECB),
+        accentColor: Color(0xFF536CE3),
+        cardColor:   Color(0xFF52BECB),
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFEFF3FE),
       ),
       home: MyHomePage(title: 'Word Up'),
     );
@@ -35,34 +35,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'WordUp',
-          textAlign: TextAlign.start,
-          style: TextStyle(
-            fontFamily: 'Josefin',
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            fontSize: 15,
-          ),
-        ),
-        backgroundColor: Theme.of(context).accentColor,
-        actions: [CircularProgressBar()],
-      ),
-      bottomNavigationBar: CurvedNavigationBar(
-        key: _bottomNavigationKey,
-        items: <Widget>[
-          Icon(Icons.loop),
-          Icon(Icons.grade),
-          Icon(Icons.search),
-          Icon(Icons.gamepad),
-          Icon(Icons.settings),
-        ],
-        onTap: (index) {
-          setState(() => _page = index );
-        },
-      ),
-    );
+    return MainPage();
   }
 }
