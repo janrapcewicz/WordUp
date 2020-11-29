@@ -32,7 +32,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   fonts:
-     - family: Josefin
+     - family: Main
        fonts:
         - asset: fonts/JosefinSans-Regular.ttf
         - asset: fonts/JosefinSans-Bold.ttf

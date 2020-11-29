@@ -6,7 +6,6 @@ void main() {
 }
 
 int page = 2;
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

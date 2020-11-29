@@ -5,10 +5,10 @@ class Word {
   final String word;
   final int idnumber;
   final String transcription;
-  final String translates;
+  final List<String> translates;
   final String pronunciation;
   final bool isnew;
-  final String allexamples;
+  final List<String> allexamples;
   final List<Meanings> meanings;
 
 

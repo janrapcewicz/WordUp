@@ -1,3 +1,7 @@
+import 'package:WordUp1/models/parts_of_speach.dart';
+import 'package:WordUp1/models/models.dart';
+import 'package:WordUp1/Widgets/learning_card.dart';
+import 'package:WordUp1/config/palette.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatefulWidget {
@@ -10,8 +14,7 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-       child: Text('Search'),
+    return Scaffold(
     );
   }
 }

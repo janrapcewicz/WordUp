@@ -21,53 +21,53 @@ class _MainPageState extends State<MainPage> {
   ];
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: _pages.length,
-      child: Scaffold(
-          // extendBody: true,
-          appBar: AppBar(
-            centerTitle: true,
-            backgroundColor: Colors.white,
-            actions: [],
-            elevation: 0,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(5),
-                bottomRight: Radius.circular(5),
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(68),
+        child: SafeArea(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                margin: EdgeInsets.only(left: 18, bottom: 8),
+                child: Align(
+                  alignment: Alignment.bottomLeft,
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                        style: TextStyle(
+                          fontFamily: 'Main',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 35,
+                          letterSpacing: 2,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Word',
+                            style: TextStyle(color: Palette.accentColor[0]),
+                          ),
+                          TextSpan(
+                            text: 'Up',
+                            style: TextStyle(color: Colors.yellow[600]),
+                          ),
+                        ]),
+                  ),
+                ),
               ),
-            ),
-            title: Center(
-              child: RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                    style: TextStyle(
-                      // fontFamily: 'Josefin',
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 25,
-                      letterSpacing: 1.5,
-                    ),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'word',
-                          style:
-                              TextStyle(color: Palette.accentColor[0])),
-                      TextSpan(
-                          text: 'up',
-                          style: TextStyle(color: Colors.yellow[600])),
-                    ]),
-              ),
-            ),
+            ],
           ),
-          bottomNavigationBar: NavBar(
-            currentPage: currentPage,
-            onTap: (index) => setState(() => currentPage = index),
-            iconSize: 25.0,
-          ),
-          body: IndexedStack(
-            index: currentPage,
-            children: _pages,
-          )),
+        ),
+      ),
+      bottomNavigationBar: NavBar(
+        currentPage: currentPage,
+        onTap: (index) => setState(() => currentPage = index),
+        iconSize: 25.0,
+      ),
+      body: AnimatedSwitcher(
+        duration: Duration(milliseconds: 150),
+        child: _pages[currentPage],
+      ),
     );
   }
 }
