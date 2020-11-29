@@ -17,7 +17,7 @@ class _EntertaimentPageState extends State<EntertaimentPage> {
           onPressed: null
         ),
       ),
-      color: Colors.black,
+      color: Colors.transparent,
     );
   }
 }

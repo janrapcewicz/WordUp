@@ -28,6 +28,8 @@ class _LearningCardState extends State<LearningCard> {
         borderRadius: BorderRadius.all(Radius.circular(20)),
         // boxShadow: [BoxShadow(blurRadius: 10, color: Color(0x22000000)),],
         color: Palette.cardColor[0],
+        // gradient: LinearGradient(
+        // ),
       ),
       child: Column(
         children: [
