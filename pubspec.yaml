@@ -13,8 +13,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.0
   # My 
-  curved_navigation_bar: ^0.3.4
-  custom_navigation_bar: ^0.6.0
+  google_nav_bar: ^3.1.0
+
 
 dev_dependencies:
   flutter_test:

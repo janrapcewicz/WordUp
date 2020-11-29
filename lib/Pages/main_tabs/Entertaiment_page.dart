@@ -1,3 +1,4 @@
+import 'package:WordUp1/config/palette.dart';
 import 'package:flutter/material.dart';
 
 class EntertaimentPage extends StatefulWidget {
@@ -11,7 +12,12 @@ class _EntertaimentPageState extends State<EntertaimentPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Entartainment'),
+      child: Center(
+        child: RaisedButton(
+          onPressed: null
+        ),
+      ),
+      color: Colors.black,
     );
   }
 }

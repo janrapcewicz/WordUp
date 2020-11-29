@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter WordUp',
-      theme: ThemeData(
-        accentColor: Color(0xFF536CE3),
-        cardColor:   Color(0xFF52BECB),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        backgroundColor: Color(0xFFEFF3FE),
-      ),
+      title: 'WordUp',
+      // theme: ThemeData(
+      //   accentColor: Color(0xFF536CE3),
+      //   cardColor:   Color(0xFF52BECB),
+      //   visualDensity: VisualDensity.adaptivePlatformDensity,
+      //   backgroundColor: Color(0xFFEFF3FE),
+      // ),
       home: MyHomePage(title: 'Word Up'),
     );
   }
